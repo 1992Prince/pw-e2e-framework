@@ -1,0 +1,4 @@
+1 - I am able to run pw scripts in github actions , 
+    get report, screenshots, videos, traces are pending
+
+2 - right now script are running in headed mode in chromium [don't run in chrome else first u need to install it first]

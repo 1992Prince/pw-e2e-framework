@@ -1,0 +1,24 @@
+1) We have lots of spec files and each spec files we have lots of tests
+2) each test can run with single test data and multiple test data
+i.e. data - driven + parametization 
+
+Approch I followed is
+1) For each spec file I am creating a json file and for each test we are defining
+   array of objects, 
+   if test runs with one test data wch is mostly the case then only one object will be present in array
+   and if test runs with multiple test data then multiple objects in array will be present
+   and each object is one set of test data
+
+2) we have test-data-reader.ts utility file to read the json as json array 
+   and we are passing json file path for each spec to it
+
+Future improvements
+--------------------------
+
+1) Make it more redable
+2) instead of passing json from spec pass it from fixture or in before.All
+3) while iterating check if in testdata , eanbled field is true then only run test with
+   that set of test data etc.
+4) make any builder pattern for redability
+5) check return type of values from json file should not impact
+6) Don't pass creds from json file, instead create env for them

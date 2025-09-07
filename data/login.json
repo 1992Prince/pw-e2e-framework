@@ -1,0 +1,22 @@
+{
+    "Login_with_valid_credentials": [
+      {
+        "username": "amrita101@mail.com",
+        "password": "root",
+        "productName": "Zara Coat 1"
+      },
+      {
+        "username": "user1@example.com",
+        "password": "Pass#1",
+        "productName": "Zara Coat 1"
+      }
+    ],
+    "Login_with_invalid_credentials": [
+        {
+          "username": "amrita101@mail.com",
+          "password": "root",
+          "productName": "Zara Coat 1"
+        }
+      ]
+  }
+  

@@ -1,0 +1,17 @@
+{
+    "HomePage":{
+        "newCars": "//div[normalize-space()='NEW CARS']",
+        "findNewCars":"text=Find New Cars"
+    },
+    "NewCarsPage":{
+        "newCarsHeading": "//h1[contains(text(),'New Cars')]",
+        "bmwCar": "//img[@title='BMW Cars']",
+        "skodaCar":"//a[@title='Skoda']",
+        "hyundaiCar":"//img[@title='Hyundai Cars']",
+        "toyotaCar": "//a[@title='Toyota']"
+
+    },"CarBase":{
+        "carTitle": "//header[1]/h1[not(contains(text(), 'New'))]",
+        "findNewCars":"text=Find New Cars"
+    }
+}

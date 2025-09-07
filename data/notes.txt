@@ -1,0 +1,13 @@
+Explanation of fields:
+
+    id: unique ID for reporting.
+
+    test: logical test name this belongs to (test1, test2).
+
+    enabled: if false, mark test as skipped.
+
+    focus: if true, run this case only (test.only).
+
+    skipReason: optional, explains why skipped (shown in report).
+
+    passwordKey: pull password from process.env.USERX_PW (never hardcode real passwords).

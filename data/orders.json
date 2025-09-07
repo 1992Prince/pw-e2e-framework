@@ -1,0 +1,22 @@
+{
+    "test1": [
+      {
+        "username": "user1@example.com",
+        "password": "Pass#1",
+        "productName": "Zara Coat 1"
+      }
+    ],
+    "test2": [
+      {
+        "username": "user3@example.com",
+        "password": "Pass#3",
+        "productName": "Zara Coat 3"
+      },
+      {
+        "username": "user4@example.com",
+        "password": "Pass#4",
+        "productName": "Zara Coat 4"
+      }
+    ]
+  }
+  

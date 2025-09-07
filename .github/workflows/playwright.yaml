@@ -22,27 +22,34 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Install system deps (Xvfb)
-        run: |
-          apt-get update
-          apt-get install -y xvfb
-
       - name: Install npm dependencies
         run: npm ci
 
       - name: Install Playwright browsers & deps
+        # safe to run even if browsers exist; ensures needed binaries are present
         run: npx playwright install --with-deps
 
       - name: Run Playwright tests (headed via Xvfb)
         env:
           CI: true
         run: |
+          # xvfb-run is available in the official Playwright image
           xvfb-run -s "-screen 0 1920x1080x24" npx playwright test --headed --reporter=dot
 
-      # Optional: Upload Playwright report / artifacts
-      - name: Upload Playwright report
+      - name: Upload Playwright report (artifact)
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: playwright-report
           path: playwright-report
+
+      - name: Upload videos/screenshots/traces (optional)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-artifacts
+          path: |
+            test-results
+            videos
+            traces
+            screenshots

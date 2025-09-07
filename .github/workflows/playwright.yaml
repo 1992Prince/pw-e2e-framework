@@ -2,14 +2,12 @@ name: Playwright tests (headed, Docker image + Xvfb)
 
 on:
   push:
-    branches: [main]
+    branches: [ main ]
   pull_request:
 
 jobs:
   e2e-headed:
     runs-on: ubuntu-latest
-
-    # run the whole job inside the official Playwright docker image
     container:
       image: mcr.microsoft.com/playwright:v1.55.0-noble
 
@@ -17,39 +15,49 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Setup Node (optional, container already has node)
+      - name: Setup Node (optional)
         uses: actions/setup-node@v4
         with:
           node-version: '18'
 
-      - name: Install npm dependencies
+      - name: Install deps
         run: npm ci
 
-      - name: Install Playwright browsers & deps
-        # safe to run even if browsers exist; ensures needed binaries are present
+      - name: Ensure Playwright browsers & deps
         run: npx playwright install --with-deps
 
       - name: Run Playwright tests (headed via Xvfb)
         env:
           CI: true
         run: |
-          # xvfb-run is available in the official Playwright image
-          xvfb-run -s "-screen 0 1920x1080x24" npx playwright test --headed --reporter=dot
+          xvfb-run -s "-screen 0 1920x1080x24" npx playwright test --headed --reporter=html
 
-      - name: Upload Playwright report (artifact)
+      # --- DEBUG: list workspace so we can see where report lands
+      - name: Debug: list workspace root
+        run: |
+          echo "GITHUB_WORKSPACE: $GITHUB_WORKSPACE"
+          echo "PWD: $(pwd)"
+          echo "Listing repo root (/github/workspace):"
+          ls -la "$GITHUB_WORKSPACE" || true
+          echo "Recursive listing (top 3 levels):"
+          find "$GITHUB_WORKSPACE" -maxdepth 3 -type d -print -exec ls -la {} \; || true
+
+      - name: Upload Playwright HTML report (folder)
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: playwright-report
-          path: playwright-report
+          path: |
+            playwright-report/**
+            playwright-report
 
-      - name: Upload videos/screenshots/traces (optional)
+      - name: Upload videos, traces, screenshots (optional)
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: playwright-artifacts
           path: |
-            test-results
-            videos
-            traces
-            screenshots
+            test-results/**
+            videos/**
+            traces/**
+            screenshots/**

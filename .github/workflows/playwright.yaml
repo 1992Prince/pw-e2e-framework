@@ -28,4 +28,7 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run Playwright tests
-        run: npx playwright test --reporter=list
+         run: |
+           npm ci
+           npx playwright install --with-deps
+           xvfb-run -s "-screen 0 1920x1080x24" npx playwright test --headed

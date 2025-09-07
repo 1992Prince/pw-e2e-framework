@@ -1,4 +1,4 @@
-name: Playwright tests (Docker image)
+name: Playwright tests (Docker image) - headed (Xvfb)
 
 on:
   push:
@@ -6,29 +6,33 @@ on:
   pull_request:
 
 jobs:
-  e2e:
-    # run the whole job inside the Playwright docker image
+  e2e-headed:
     container:
       image: mcr.microsoft.com/playwright:v1.55.0-noble
-    runs-on: ubuntu-latest # required but job runs inside container
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Setup Node (optional, container already has node)
+      - name: Setup Node (optional)
         uses: actions/setup-node@v4
         with:
-          node-version: '18' # or your version (optional)
+          node-version: '18'
 
-      - name: Install dependencies
+      - name: Install system deps & Xvfb
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y xvfb
+          # ensure fonts/other deps if needed (optional)
+      - name: Install npm deps
         run: npm ci
 
       - name: Install Playwright browsers & deps
         run: npx playwright install --with-deps
 
-      - name: Run Playwright tests
-         run: |
-           npm ci
-           npx playwright install --with-deps
-           xvfb-run -s "-screen 0 1920x1080x24" npx playwright test --headed
+      - name: Run Playwright tests (headed via Xvfb)
+        env:
+          CI: true
+        run: |
+          xvfb-run -s "-screen 0 1920x1080x24" npx playwright test --headed --reporter=dot

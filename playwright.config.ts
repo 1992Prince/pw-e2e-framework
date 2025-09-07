@@ -35,7 +35,7 @@ export default defineConfig({
     screenshot: 'only-on-failure',
     headless: false,
     browserName: 'chromium',
-    channel: 'chrome',
+    //channel: 'chrome',
   },
 
   /* Configure projects for major browsers */

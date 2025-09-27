@@ -1,0 +1,70 @@
+2025-09-24 08:45:06 [error]: ❌ Failed navigating with invalid element: locator.click: Test timeout of 20000ms exceeded.
+Call log:
+  - waiting for locator('//a[contains(text(),\'CREAT@3E NEW ACCOUNT\')]')
+
+2025-09-27 15:14:29 [error]: ❌ Failed verifying Home Page: ❌ Home Page logo not visible
+2025-09-27 15:14:29 [error]: Test failed: Validate_User_Registration
+2025-09-27 15:14:29 [error]: File: D:\2025\23-framework\pw-e2e-framework\src\tests\02-ui-tests\03-register-shopping-checkout.spec.ts | Line: 24
+2025-09-27 15:14:29 [error]: Duration(ms): 4715
+2025-09-27 15:14:29 [error]: Error message: Error: ❌ Home Page logo not visible
+2025-09-27 15:14:29 [error]: Stack trace:
+Error: ❌ Home Page logo not visible
+    at D:\2025\23-framework\pw-e2e-framework\src\pages\AdvantageHomePage.ts:32:27
+    at AdvantageHomePage.isAt (D:\2025\23-framework\pw-e2e-framework\src\pages\AdvantageHomePage.ts:27:16)
+2025-09-27 15:14:29 [error]: ❌ Failed navigating to Register User page: locator.click: Test ended.
+Call log:
+  - waiting for locator('//a[@id=\'hrefUserIcon\']')
+
+2025-09-27 15:16:40 [error]: ❌ Failed verifying Home Page: ❌ Home Page logo not visible
+2025-09-27 15:16:40 [error]: Test failed: Validate_User_Registration_Failed_Test
+2025-09-27 15:16:40 [error]: File: D:\2025\23-framework\pw-e2e-framework\src\tests\02-ui-tests\03-register-shopping-checkout.spec.ts | Line: 49
+2025-09-27 15:16:40 [error]: Duration(ms): 2686
+2025-09-27 15:16:40 [error]: Error message: Error: ❌ Home Page logo not visible
+2025-09-27 15:16:40 [error]: Stack trace:
+Error: ❌ Home Page logo not visible
+    at D:\2025\23-framework\pw-e2e-framework\src\pages\AdvantageHomePage.ts:32:27
+    at AdvantageHomePage.isAt (D:\2025\23-framework\pw-e2e-framework\src\pages\AdvantageHomePage.ts:27:16)
+2025-09-27 15:16:40 [error]: ❌ Failed navigating with invalid element: locator.click: Test ended.
+Call log:
+  - waiting for locator('//a[@id=\'hrefUserIcon\']')
+
+2025-09-27 15:17:17 [error]: ❌ Failed verifying Home Page: ❌ Home Page logo not visible
+2025-09-27 15:17:18 [error]: Test failed: Validate_User_Registration_Failed_Test
+2025-09-27 15:17:18 [error]: File: D:\2025\23-framework\pw-e2e-framework\src\tests\02-ui-tests\03-register-shopping-checkout.spec.ts | Line: 49
+2025-09-27 15:17:18 [error]: Duration(ms): 2109
+2025-09-27 15:17:18 [error]: Error message: Error: ❌ Home Page logo not visible
+2025-09-27 15:17:18 [error]: Stack trace:
+Error: ❌ Home Page logo not visible
+    at D:\2025\23-framework\pw-e2e-framework\src\pages\AdvantageHomePage.ts:32:27
+    at AdvantageHomePage.isAt (D:\2025\23-framework\pw-e2e-framework\src\pages\AdvantageHomePage.ts:27:16)
+2025-09-27 15:17:18 [error]: ❌ Failed navigating with invalid element: locator.click: Test ended.
+Call log:
+  - waiting for locator('//a[@id=\'hrefUserIcon\']')
+
+2025-09-27 15:18:32 [error]: ❌ Failed verifying Home Page: ❌ Home Page logo not visible
+2025-09-27 15:18:32 [error]: Test failed: Validate_User_Registration
+2025-09-27 15:18:32 [error]: File: D:\2025\23-framework\pw-e2e-framework\src\tests\02-ui-tests\03-register-shopping-checkout.spec.ts | Line: 24
+2025-09-27 15:18:32 [error]: Duration(ms): 2615
+2025-09-27 15:18:32 [error]: Error message: Error: ❌ Home Page logo not visible
+2025-09-27 15:18:32 [error]: Stack trace:
+Error: ❌ Home Page logo not visible
+    at D:\2025\23-framework\pw-e2e-framework\src\pages\AdvantageHomePage.ts:32:27
+    at AdvantageHomePage.isAt (D:\2025\23-framework\pw-e2e-framework\src\pages\AdvantageHomePage.ts:27:16)
+2025-09-27 15:18:32 [error]: ❌ Failed navigating to Register User page: locator.click: Test ended.
+Call log:
+  - waiting for locator('//a[@id=\'hrefUserIcon\']')
+
+2025-09-27 15:18:38 [error]: ❌ Failed verifying Home Page: ❌ Home Page logo not visible
+2025-09-27 15:18:38 [error]: Test failed: Validate_User_Registration_Failed_Test
+2025-09-27 15:18:38 [error]: File: D:\2025\23-framework\pw-e2e-framework\src\tests\02-ui-tests\03-register-shopping-checkout.spec.ts | Line: 49
+2025-09-27 15:18:38 [error]: Duration(ms): 2510
+2025-09-27 15:18:38 [error]: Error message: Error: ❌ Home Page logo not visible
+2025-09-27 15:18:38 [error]: Stack trace:
+Error: ❌ Home Page logo not visible
+    at D:\2025\23-framework\pw-e2e-framework\src\pages\AdvantageHomePage.ts:32:27
+    at AdvantageHomePage.isAt (D:\2025\23-framework\pw-e2e-framework\src\pages\AdvantageHomePage.ts:27:16)
+2025-09-27 15:18:38 [error]: ❌ Failed navigating with invalid element: page.waitForTimeout: Test ended.
+2025-09-27 15:19:38 [error]: ❌ Failed navigating with invalid element: locator.click: Test timeout of 20000ms exceeded.
+Call log:
+  - waiting for locator('//a[contains(text(),\'CREAT@3E NEW ACCOUNT\')]')
+

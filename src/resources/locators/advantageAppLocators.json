@@ -1,0 +1,26 @@
+{
+    "HomePage":{
+        "logoTxt": "//span[contains(text(),'dvantage')]",
+        "registerUserIcon":"//a[@id='hrefUserIcon']",
+        "registerUser":"//a[contains(text(),'CREATE NEW ACCOUNT')]",
+        "registerUserInvalidLoc":"//a[contains(text(),'CREAT@3E NEW ACCOUNT')]"
+    },
+    "RegisterPage":{
+        "logoTxt": "//h3[contains(text(),'CREATE ACCOUNT')]",
+        "usernameTxtBx": "//input[@name='usernameRegisterPage']",
+        "emailTxtBx":"//input[@name='emailRegisterPage']",
+        "passTxtBx":"//input[@name='passwordRegisterPage']",
+        "confirmTxtBx": "//input[@name='confirm_passwordRegisterPage']",
+        "fNameTxtBx": "//input[@name='first_nameRegisterPage']",
+        "LNameTxtBx": "//input[@name='last_nameRegisterPage']",
+        "phoneTxtBx": "//input[@name='phone_numberRegisterPage']",
+        "countryDrpDwn": "//select[@name='countryListboxRegisterPage']",
+        "cityTxtBx": "//input[@name='cityRegisterPage']",
+        "addressTxtBx": "//input[@name='addressRegisterPage']",
+        "stateTxtBx": "//input[@name='state_/_province_/_regionRegisterPage']",
+        "postalCode": "//input[@name='postal_codeRegisterPage']",
+        "iagreeChkbox": "//input[@name='i_agree']",
+        "registerBtn": "//button[@id='register_btn']",
+        "homePageLogo": "//div[@class='logo']"
+    }
+}

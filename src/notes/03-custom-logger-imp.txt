@@ -1,0 +1,4 @@
+It is implemented in very small way but we need to impement it properly
+1) all logs should be stored in a file
+2) from initation till test execution end all logs should go into file
+3) also we need to check if we run in parallel-mode how it work

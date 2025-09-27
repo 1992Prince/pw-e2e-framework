@@ -1,0 +1,14 @@
+1) Injecting JWT Session token into API Calls using Postman
+2) How to work with POST call form-data
+3) How to send attachements through request using Postman
+4) Unautorized 403 API Example with Postman
+
+End to End flow
+-------------------
+
+Login API -> Create Product -> Purchase order on created Product -> Delete Order -> Delete Product
+
+
+https://rahulshettyacademy.com/client
+amrita101@mail.com
+root

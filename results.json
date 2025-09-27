@@ -1,0 +1,259 @@
+{
+  "config": {
+    "configFile": "D:\\2025\\23-framework\\pw-e2e-framework\\playwright.config.ts",
+    "rootDir": "D:/2025/23-framework/pw-e2e-framework/tests",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "customEnv": {
+        "baseURL": "https://www.advantageonlineshopping.com/#/",
+        "username": "prod_user",
+        "password": "prod_pass",
+        "apiKey": "prod_key"
+      },
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "D:/2025/23-framework/pw-e2e-framework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "customEnv": {
+            "baseURL": "https://www.advantageonlineshopping.com/#/",
+            "username": "prod_user",
+            "password": "prod_pass",
+            "apiKey": "prod_key"
+          },
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "D:/2025/23-framework/pw-e2e-framework/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 20000
+      },
+      {
+        "outputDir": "D:/2025/23-framework/pw-e2e-framework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "customEnv": {
+            "baseURL": "https://www.advantageonlineshopping.com/#/",
+            "username": "prod_user",
+            "password": "prod_pass",
+            "apiKey": "prod_key"
+          },
+          "actualWorkers": 1
+        },
+        "id": "carwale-app",
+        "name": "carwale-app",
+        "testDir": "D:/2025/23-framework/pw-e2e-framework/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "01-homepage.spec.ts",
+          "02-findnewcar.spec.ts"
+        ],
+        "timeout": 20000
+      },
+      {
+        "outputDir": "D:/2025/23-framework/pw-e2e-framework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "customEnv": {
+            "baseURL": "https://www.advantageonlineshopping.com/#/",
+            "username": "prod_user",
+            "password": "prod_pass",
+            "apiKey": "prod_key"
+          },
+          "actualWorkers": 1
+        },
+        "id": "advantage-app",
+        "name": "advantage-app",
+        "testDir": "D:/2025/23-framework/pw-e2e-framework/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "03-register-shopping-checkout.spec.ts"
+        ],
+        "timeout": 20000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.55.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "03-register-shopping-checkout.spec.ts",
+      "file": "03-register-shopping-checkout.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Validate_User_Registration_Failed_Test",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "advantage-app",
+              "projectName": "advantage-app",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 21067,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 20000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 20000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 20000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "D:\\2025\\23-framework\\pw-e2e-framework\\pages\\BasePage.ts",
+                        "column": 42,
+                        "line": 18
+                      },
+                      "message": "Error: locator.click: Test timeout of 20000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//a[contains(text(),\\'CREAT@3E NEW ACCOUNT\\')]')\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\pages\\BasePage.ts:18\n\n\u001b[0m \u001b[90m 16 |\u001b[39m\n \u001b[90m 17 |\u001b[39m     \u001b[36masync\u001b[39m click(locator\u001b[33m:\u001b[39m string) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 18 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(locator)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 19 |\u001b[39m     }\n \u001b[90m 20 |\u001b[39m\n \u001b[90m 21 |\u001b[39m     \u001b[36masync\u001b[39m fill(locator\u001b[33m:\u001b[39m string\u001b[33m,\u001b[39m value\u001b[33m:\u001b[39m string) {\u001b[0m\n\u001b[2m    at AdvantageHomePage.click (D:\\2025\\23-framework\\pw-e2e-framework\\pages\\BasePage.ts:18:42)\u001b[22m\n\u001b[2m    at D:\\2025\\23-framework\\pw-e2e-framework\\pages\\AdvantageHomePage.ts:68:28\u001b[22m\n\u001b[2m    at AdvantageHomePage.negativeRegisterUserFlow (D:\\2025\\23-framework\\pw-e2e-framework\\pages\\AdvantageHomePage.ts:64:9)\u001b[22m\n\u001b[2m    at D:\\2025\\23-framework\\pw-e2e-framework\\tests\\03-register-shopping-checkout.spec.ts:51:9\u001b[22m"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "2025-09-16 15:54:24 [\u001b[32minfo\u001b[39m]: \u001b[32mBaseTest - Navigating to home page (fixture)\u001b[39m\r\n"
+                    },
+                    {
+                      "text": "2025-09-16 15:54:28 [\u001b[32minfo\u001b[39m]: \u001b[32mVerifying Home Page...\u001b[39m\r\n"
+                    },
+                    {
+                      "text": "URL -  https://www.advantageonlineshopping.com/#/\n"
+                    },
+                    {
+                      "text": "Username -  prod_user\n"
+                    },
+                    {
+                      "text": "Password -  prod_pass\n"
+                    },
+                    {
+                      "text": "\n"
+                    },
+                    {
+                      "text": "APPLICATION : CRM-CUSTOMER-APP\n"
+                    },
+                    {
+                      "text": "Release no : R1.0\n"
+                    },
+                    {
+                      "text": "2025-09-16 15:54:28 [\u001b[32minfo\u001b[39m]: \u001b[32mTest Started : Validate User Registration\u001b[39m\r\n"
+                    },
+                    {
+                      "text": "2025-09-16 15:54:28 [\u001b[32minfo\u001b[39m]: \u001b[32mAttempting Register User navigation with invalid element...\u001b[39m\r\n"
+                    },
+                    {
+                      "text": "2025-09-16 15:54:28 [\u001b[32minfo\u001b[39m]: \u001b[32m✔️ User is at Home Page\u001b[39m\r\n"
+                    },
+                    {
+                      "text": "2025-09-16 15:54:44 [\u001b[31merror\u001b[39m]: \u001b[31m❌ Failed navigating with invalid element: locator.click: Test timeout of 20000ms exceeded.\u001b[39m\n\u001b[31mCall log:\u001b[39m\n\u001b[31m\u001b[2m  - waiting for locator('//a[contains(text(),\\'CREAT@3E NEW ACCOUNT\\')]')\u001b[22m\u001b[39m\n\u001b[31m\u001b[39m\r\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Attempt navigation with invalid element (negative flow)",
+                      "duration": 16381,
+                      "error": {
+                        "message": "Error: locator.click: Test timeout of 20000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//a[contains(text(),\\'CREAT@3E NEW ACCOUNT\\')]')\u001b[22m\n",
+                        "stack": "Error: locator.click: Test timeout of 20000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//a[contains(text(),\\'CREAT@3E NEW ACCOUNT\\')]')\u001b[22m\n\n    at AdvantageHomePage.click (D:\\2025\\23-framework\\pw-e2e-framework\\pages\\BasePage.ts:18:42)\n    at D:\\2025\\23-framework\\pw-e2e-framework\\pages\\AdvantageHomePage.ts:68:28\n    at AdvantageHomePage.negativeRegisterUserFlow (D:\\2025\\23-framework\\pw-e2e-framework\\pages\\AdvantageHomePage.ts:64:9)\n    at D:\\2025\\23-framework\\pw-e2e-framework\\tests\\03-register-shopping-checkout.spec.ts:51:9",
+                        "location": {
+                          "file": "D:\\2025\\23-framework\\pw-e2e-framework\\pages\\BasePage.ts",
+                          "column": 42,
+                          "line": 18
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\pages\\BasePage.ts:18\n\n\u001b[0m \u001b[90m 16 |\u001b[39m\n \u001b[90m 17 |\u001b[39m     \u001b[36masync\u001b[39m click(locator\u001b[33m:\u001b[39m string) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 18 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(locator)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 19 |\u001b[39m     }\n \u001b[90m 20 |\u001b[39m\n \u001b[90m 21 |\u001b[39m     \u001b[36masync\u001b[39m fill(locator\u001b[33m:\u001b[39m string\u001b[33m,\u001b[39m value\u001b[33m:\u001b[39m string) {\u001b[0m"
+                      }
+                    }
+                  ],
+                  "startTime": "2025-09-16T10:24:23.231Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\2025\\23-framework\\pw-e2e-framework\\test-results\\03-register-shopping-check-4c0b4-er-Registration-Failed-Test-advantage-app\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "D:\\2025\\23-framework\\pw-e2e-framework\\test-results\\03-register-shopping-check-4c0b4-er-Registration-Failed-Test-advantage-app\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\2025\\23-framework\\pw-e2e-framework\\test-results\\03-register-shopping-check-4c0b4-er-Registration-Failed-Test-advantage-app\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\2025\\23-framework\\pw-e2e-framework\\test-results\\03-register-shopping-check-4c0b4-er-Registration-Failed-Test-advantage-app\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "287f7fde5cbdf3e6148a-0c07cf25eff08d2959e3",
+          "file": "03-register-shopping-checkout.spec.ts",
+          "line": 37,
+          "column": 9
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-09-16T10:24:21.197Z",
+    "duration": 24993.010000000002,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

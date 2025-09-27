@@ -1,0 +1,17 @@
+{
+    "Dynamic Payload POST Req": [
+      {
+        "env":"stg",
+        "firstname": "user1@example.com_stg",
+        "lastname": "Pass#1_stg",
+        "additionalneeds": "Zara Coat 1 STG"
+      },
+      {
+        "env":"prod",
+        "firstname": "user1@example.com_prod",
+        "lastname": "Pass#1_prod",
+        "additionalneeds": "Zara Coat 1 prod"
+      }
+    ]
+  }
+  

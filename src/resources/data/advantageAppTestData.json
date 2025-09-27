@@ -1,0 +1,17 @@
+{
+    "Validate_User_Registration": [
+      {
+        "username": "pikachu",
+        "email": "pikachu@email.com",
+        "password": "Pikachu@123",
+        "fname": "Arnab",
+        "lname": "Mahajan",
+        "phoneno": "1231231231",
+        "country":"India",
+        "city": "Noida",
+        "state": "Gurugram",
+        "postalcode": "211005"
+      }
+    ]
+  }
+  

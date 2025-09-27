@@ -1,0 +1,25 @@
+{
+    "HomePage":{
+        "newCars": "//div[normalize-space()='NEW CARS']",
+        "findNewCars":"text=Find New Cars"
+    },
+    "NewCarsPage":{
+        "newCarsHeading": "//h1[contains(text(),'New Cars')]",
+        "bmwCar": "//img[@title='BMW Cars']",
+        "skodaCar":"//a[@title='Skoda']",
+        "hyundaiCar":"//img[@title='Hyundai Cars']",
+        "toyotaCar": "//a[@title='Toyota']"
+
+    },"CarBase":{
+        "carHomePageTitle": "//img[@title='CarWale']",
+        "findNewCars":"text=Find New Cars",
+        "searchCar":"//input[@placeholder='Search']",
+        "searchSubmit":"(//div[@title='Search']/div/div/div)[1]/div/div",
+        "location":"//div[@title='Location']",
+        "closePopup":"(//span[@aria-label='Close Popup'])[1]",
+        "newCarsLabel":"//div[contains(text(),'NEW CARS')]",
+        "usedCarsLabel":"//div[contains(text(),'USED CARS')]",
+        "reviewsLabel":"//div[contains(text(),'REVIEWS & NEWS')]",
+        "tataNexonLoc":"//h1[@data-lang-id='car_overview_heading']"
+    }
+}

@@ -1,0 +1,34 @@
+=> expect(body).toBeTruthy();
+=> const firstname = String(body.name?.firstname ?? '').trim();
+
+=> explain - console.log('Payload:', JSON.stringify(options.data, null, 2)); in 09-payload-demo.spec.ts
+
+        JSON.stringify(value, replacer, space);
+        value → jo object/array/string tum JSON me convert karna chahte ho (options.data in this case).
+
+        replacer → optional function ya array hota hai filter karne ke liye. Agar null dete ho → matlab kuch filter mat karo, pura object as-is stringify karo.
+
+        space → number of spaces for indentation (pretty print). Agar 2 dete ho → JSON har level pe 2 spaces ke sath format hoga.
+
+        Example:
+        ts
+        Copy code
+        const payload = { firstname: "Jim", lastname: "Brown", totalprice: 111 };
+
+        console.log(JSON.stringify(payload)); 
+        // Output: {"firstname":"Jim","lastname":"Brown","totalprice":111}
+
+        console.log(JSON.stringify(payload, null, 2)); 
+        // Output (pretty printed):
+        /*
+        {
+        "firstname": "Jim",
+        "lastname": "Brown",
+        "totalprice": 111
+        }
+        */
+        👉 Matlab null, 2 lagane se log readable ban jata hai (pretty printed JSON).
+        Agar tum simple compact version chahte ho → JSON.stringify(payload) likh sakte ho.
+
+
+=> 

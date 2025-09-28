@@ -26,6 +26,7 @@ export class RequestHandler {
     private queryParams: object = {}; // assigning default value as empty object
     private requestHeaders: Record<string, string> = {};
     private requestBody: object = {}; // assigning default value as empty object
+    private formParams: Record<string, any> = {};
 
     // constructor injection
     constructor(request: APIRequestContext, apiLogger: APILogger, apiBaseUrl?: string,) {
@@ -55,6 +56,11 @@ export class RequestHandler {
         return this;
     }
 
+    formParam(params: Record<string, any>) {
+        this.formParams = params;
+        return this; // chainable
+    }
+
     body(body: object) {
         this.requestBody = body;
         return this;
@@ -65,6 +71,23 @@ export class RequestHandler {
         this.apiLogger.logRequest('GET', url, this.requestHeaders);
         const response = await this.request.get(url, {
             headers: this.requestHeaders,
+        })
+
+        this.cleanUpFields(); // clean up fields after request is made
+
+        const actualStatusCode = response.status();
+        const respBody = await response.json();
+        this.apiLogger.logResponse(actualStatusCode, respBody);
+
+        return response;
+    }
+
+    async postFormRequest() {
+        const url = this.getUrl();
+        this.apiLogger.logRequest('POST', url, this.requestHeaders, this.formParams);
+        const response = await this.request.post(url, {
+            headers: this.requestHeaders,
+            multipart: this.formParams
         })
 
         this.cleanUpFields(); // clean up fields after request is made

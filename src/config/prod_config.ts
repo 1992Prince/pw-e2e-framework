@@ -1,8 +1,11 @@
 // configs/PROD_DEMO.ts
 export default {
     baseURL: "https://www.advantageonlineshopping.com/#/",
-    username: "prod_user",
-    password: "prod_pass",
+    username: "amrita101@mail.com",
+    password: "root",
     apiKey: "prod_key",
-    baseConduitURL: "https://conduit-api.bondaracademy.com/api"
+    baseConduitURL: "https://conduit-api.bondaracademy.com/api",
+    shettyBaseUri: "https://rahulshettyacademy.com",
+    tokenEndpoint: "/api/ecom/auth/login",
+    createProductEndpoint: "/api/ecom/product/add-product/",
 };

@@ -82,6 +82,14 @@ export default defineConfig({
         '03-register-shopping-checkout.spec.ts',
       ],
     },
+    {
+      // npx playwright test --project=ecom-api
+      name: 'ecom-api',   // 👈 your custom project
+      testMatch: [
+        'ecom-e2e-smokeTest.spec.ts',
+        'smokeTest.spec.ts',
+      ],
+    },
 
   ],
 
@@ -97,3 +105,5 @@ export default defineConfig({
     customEnv: envConfig, // you can access in tests
   },
 });
+
+// npx playwright test src/tests/03-smoke-api-tests/smokeTest.spec.ts

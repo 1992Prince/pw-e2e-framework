@@ -12,3 +12,66 @@ Login API -> Create Product -> Purchase order on created Product -> Delete Order
 https://rahulshettyacademy.com/client
 amrita101@mail.com
 root
+
+
+-----------------------------------------------------------------------------
+
+what is good practice to keep assertions in test or in pageobjects
+ChatGPT said:
+
+Good question 👍 — this is where test design philosophy comes in.
+
+Here’s the breakdown:
+
+✅ Good Practices
+1. Assertions belong in tests, not Page Objects
+
+Page Object (PO): should only interact with the system (locators, actions, API calls).
+
+Tests: should contain assertions/validations to verify behavior.
+
+Why?
+👉 Keeps your Page Object reusable across multiple test scenarios.
+👉 Different tests may assert different things after the same action.
+
+2. Exceptions to the rule
+
+Sometimes you can put lightweight assertions inside Page Objects:
+
+Checking an element is visible after an action (expect(page.locator('...')).toBeVisible()).
+
+Verifying navigation landed on the expected page.
+
+But heavy business logic assertions (like checking API response structure or message text) should stay in tests.
+
+3. API Tests in Playwright
+
+Since you’re testing API responses here:
+
+Keep the API request methods (login, fetch products, etc.) in a utility/service class (similar to PageObject, but for API).
+
+Keep the assertions in the tests.
+
+------------------------------------------------------------------------------------------------
+
+
+Q - If I run beforeAll with no tests will it run
+
+👉 No.
+In Playwright, a beforeAll (or afterAll) is tied to the lifecycle of tests in that file/suite.
+
+If there are no tests, Playwright will not execute the beforeAll.
+
+The hooks (beforeAll, beforeEach, etc.) only run if at least one test in the same scope is going to run.
+
+Example 1: No tests
+import { test } from '@playwright/test';
+
+test.beforeAll(async () => {
+  console.log('This will NOT run 🚫');
+});
+
+
+👉 If u try to run above spec.ts file then Nothing runs, because there are no tests.
+
+------------------------------------------------------------------------------------------------

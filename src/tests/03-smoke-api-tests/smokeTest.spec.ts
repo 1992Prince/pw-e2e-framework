@@ -22,7 +22,7 @@ test.beforeAll('Login to Conduit API', async ({ request }) => {
 });
 
 
-test.skip('Get All Articles', async ({ api }) => {
+test('Get All Articles', async ({ api }) => {
 
     // query params object
     const queryParams = {
@@ -49,7 +49,7 @@ test.skip('Get All Articles', async ({ api }) => {
 
 });
 
-test.skip('Get All Tags', async ({ api }) => {
+test('Get All Tags', async ({ api }) => {
     const response = await api
         //  .url('https://conduit-api.bondaracademy.com/api') // beasUrl is already set in fixture but u can also pass it from here also
         .path('/tags') // path will be diff for each api call so lets pass it from here
